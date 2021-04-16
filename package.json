@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "list": "lerna list",
-    "dev": "webpack-dev-server --progress --config build/webpack.config.base.js",
-    "build": "webpack --config build/webpack.config.build.js",
+    "dev": "webpack-dev-server --progress --config build/webpack.config.dev.js",
+    "build": "webpack --config build/webpack.config.prod.js",
     "reinstall": "rimraf node_modules && yarn"
   },
   "peerDependencies": {
@@ -29,7 +29,8 @@
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   },
   "workspaces": [
     "packages/*"

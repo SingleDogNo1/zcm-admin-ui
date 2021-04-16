@@ -1,14 +1,8 @@
 'use strict'
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const path = require('path')
 
-module.exports = {
-  entry: path.resolve(__dirname, '../website/index.ts'),
-  output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: 'index.js'
-  },
+const webpackConfig = {
   resolve: {
     alias: {
       '@package': path.resolve(__dirname, '../packages'),
@@ -57,11 +51,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './website/index.html',
-      filename: './index.html'
-    }),
-    new VueLoaderPlugin()
-  ]
+  plugins: [new VueLoaderPlugin()]
 }
+
+module.exports = webpackConfig
