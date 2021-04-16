@@ -1,17 +1,18 @@
 'use strict'
 const path = require('path')
-const { VueLoaderPlugin } = require('vue-loader')
+const {merge} = require('webpack-merge')
+const baseWebpackConfig = require('./webpack.config.base')
 
-
-module.exports = {
+module.exports = merge(baseWebpackConfig, {
   mode: 'production',
   entry: {
-    'adminUI': './packages/admin-ui/index.js'
+    adminUI: './packages/admin-ui/index.ts'
   },
   output: {
-    path: path.resolve(__dirname, '../package'), // 出口目录
-    publicPath: '/package/',
+    path: path.resolve(__dirname, '../lib'), // 出口目录
+    publicPath: '/lib/',
     library: 'adminUI', // 包名
+    filename: 'index.js',
     libraryTarget: 'umd',
     umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名。否则就使用匿名的 define
   },
@@ -33,21 +34,5 @@ module.exports = {
         }
       }
     }
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: "babel-loader",
-        exclude: /node_modules/
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
-      }
-    ]
-  },
-  plugins: [
-    new VueLoaderPlugin(),
-  ]
-}
+  }
+})

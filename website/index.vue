@@ -4,14 +4,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
 
 export default defineComponent({
   name: 'app',
   setup(props, ctx) {
     const state = reactive({
-      name: 'hello, app11kjdasjkdhjksahdkas1'
+      name: 'admin ui'
     })
 
     return {
