@@ -36,5 +36,6 @@ export default defineComponent({
 <style lang="scss">
 h2 {
   color: red;
+  background: blue;
 }
 </style>

@@ -1,0 +1,18 @@
+# Editor
+.vscode
+.idea
+
+# Project
+*.md
+/lib
+/build
+
+# typescript
+*.d.ts
+
+# file
+*.scss
+*.html
+
+# Others
+node_modules

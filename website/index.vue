@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <Hello :name="name"></Hello>
+    <Hello :name="name" />
   </div>
 </template>
 
@@ -8,12 +8,9 @@
 import { defineComponent, reactive, toRefs } from 'vue'
 
 export default defineComponent({
-  name: 'app',
-  setup(props, ctx) {
-    const state = reactive({
-      name: 'admin ui'
-    })
-
+  name: 'App',
+  setup() {
+    const state = reactive({ name: 'admin ui' })
     return {
       ...toRefs(state)
     }
