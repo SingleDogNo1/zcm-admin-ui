@@ -20,9 +20,7 @@ export default defineComponent({
     }
   },
   setup() {
-    const state = reactive<State>({
-      msg: 'aaa'
-    })
+    const state = reactive<State>({ msg: 'aaa' })
 
     console.log('state.msg :>> ', state.msg)
 
