@@ -5,7 +5,7 @@ const { merge } = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.config.base')
 
 module.exports = merge(baseWebpackConfig, {
-  entry: path.resolve(__dirname, '../website/index.ts'),
+  entry: path.resolve(__dirname, '../website/main.ts'),
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'index.js'
