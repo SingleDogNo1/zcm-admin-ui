@@ -1,14 +1,26 @@
 <template>
-  <div class="app">
-    <Hello :name="name" />
-  </div>
+  <Header />
+  <section class="content-wrapper">
+    <Nav class="menu-bar" />
+    <Container class="content">
+      <router-view />
+    </Container>
+  </section>
 </template>
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
+import Header from './components/Header/index.vue'
+import Nav from './components/Nav/index.vue'
+import Container from './components/Container/index.vue'
 
 export default defineComponent({
   name: 'App',
+  components: {
+    Header,
+    Nav,
+    Container
+  },
   setup() {
     const state = reactive({ name: 'admin ui' })
     return {
@@ -17,3 +29,21 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.content-wrapper {
+  display: flex;
+  overflow: hidden;
+  flex: 1;
+
+  .menu-bar {
+    width: 200px;
+    color: #fff;
+    background: red;
+  }
+
+  .content {
+    flex: 1;
+  }
+}
+</style>

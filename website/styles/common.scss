@@ -1,0 +1,58 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    SimSun, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+a {
+  color: #409eff;
+  text-decoration: none;
+}
+
+code {
+  padding: 0 4px;
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.hljs {
+  padding: 18px 24px;
+  margin-bottom: 25px;
+  font-family: Menlo, Monaco, Consolas, Courier, monospace;
+  font-size: 12px;
+  -webkit-font-smoothing: auto;
+  line-height: 1.8;
+  background-color: #fafafa;
+  border: solid 1px #eaeefb;
+  border-radius: 4px;
+}
+
+
+
+.demo {
+  margin: 20px 0;
+}

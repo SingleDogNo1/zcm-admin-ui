@@ -22,7 +22,7 @@ const webpackConfig = {
         loader: 'vue-loader'
       },
       {
-        test: /\.scss$/,
+        test: /\.(css|sass|scss)$/,
         use: [
           { loader: 'style-loader' },
           {
@@ -48,6 +48,22 @@ const webpackConfig = {
           }
         ],
         exclude: /node_modules/
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              compilerOptions: {
+                preserveWhitespace: false
+              }
+            }
+          },
+          {
+            loader: path.resolve(__dirname, './md-loader/index.js')
+          }
+        ]
       }
     ]
   },
