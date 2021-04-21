@@ -1,12 +1,9 @@
 {
-  "name": "button",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "name": "@admin-ui/button",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.0.11"
+  }
 }

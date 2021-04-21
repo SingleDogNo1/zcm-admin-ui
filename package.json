@@ -7,6 +7,7 @@
     "dev": "webpack-dev-server --progress --config build/webpack.config.dev.js",
     "build": "webpack --config build/webpack.config.prod.js",
     "reinstall": "rimraf node_modules && yarn",
+    "bootstrap": "lerna clean -y && lerna bootstrap",
     "lint:packages": "eslint --ext .ts,.js,.vue,.css,.json,.scss packages --fix",
     "lint:website": "eslint --ext .ts,.js,.vue,.css,.json,.scss website --fix",
     "lint": "yarn lint:packages && yarn lint:website",
