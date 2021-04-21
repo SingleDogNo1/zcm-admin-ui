@@ -4,6 +4,6 @@
   "main": "dist/index.js",
   "license": "ISC",
   "dependencies": {
-    "@admin-ui/button": "^0.0.0"
+    "@admin-ui/button": "^0.0.1"
   }
 }
