@@ -1,8 +1,9 @@
 import { App } from 'vue'
 
-import ElButton from '../button'
+import DtButton from '../button'
+import DtIcon from '../icon'
 
-const components = [ElButton]
+const components = [DtButton, DtIcon]
 
 const install = (app: App): void => {
   components.forEach(component => {
@@ -10,6 +11,6 @@ const install = (app: App): void => {
   })
 }
 
-export { ElButton, install }
+export { DtButton, DtIcon, install }
 
 export default { install }

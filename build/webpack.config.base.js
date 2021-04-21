@@ -5,7 +5,7 @@ const path = require('path')
 const webpackConfig = {
   resolve: {
     alias: {
-      '@package': path.resolve(__dirname, '../packages'),
+      '@packages': path.resolve(__dirname, '../packages'),
       '@website': path.resolve(__dirname, '../website')
     },
     extensions: ['.ts', '.js', '.json']
@@ -64,6 +64,14 @@ const webpackConfig = {
             loader: path.resolve(__dirname, './md-loader/index.js')
           }
         ]
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader'
       }
     ]
   },

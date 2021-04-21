@@ -1,7 +1,7 @@
-import ElButton from './src/index.vue'
+import DtButton from './src/index.vue'
 
-ElButton.install = app => {
-  app.component(ElButton.name, ElButton)
+DtButton.install = app => {
+  app.component(DtButton.name, DtButton)
 }
 
-export default ElButton
+export default DtButton

@@ -2,7 +2,7 @@
   <Header />
   <section class="content-wrapper">
     <Nav class="menu-bar" />
-    <Container class="content">
+    <Container class="doc-wrapper">
       <router-view />
     </Container>
   </section>
@@ -42,7 +42,7 @@ export default defineComponent({
     background: red;
   }
 
-  .content {
+  .doc-wrapper {
     flex: 1;
   }
 }

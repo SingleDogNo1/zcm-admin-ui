@@ -1,7 +1,8 @@
 'use strict'
 const path = require('path')
-const {merge} = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.config.base')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = merge(baseWebpackConfig, {
   mode: 'production',
@@ -34,5 +35,11 @@ module.exports = merge(baseWebpackConfig, {
         }
       }
     }
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin({
+      dry: true,
+      cleanAfterEveryBuildPatterns: ['lib', '*.*']
+    })
+  ]
 })

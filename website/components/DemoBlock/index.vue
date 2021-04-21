@@ -11,8 +11,9 @@
         <slot name="highlight"></slot>
       </div>
       <div class="demo-block-control" @click="showMeta">
-        <el-icon :name="iconName" />
-        <span v-show="hovering">{{ hoveringText }}</span>
+        <dt-icon :name="iconName" />
+        <!-- <span v-show="hovering">{{ hoveringText }}</span> -->
+        <span>{{ hoveringText }}</span>
       </div>
     </div>
   </div>
