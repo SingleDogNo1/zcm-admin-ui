@@ -2,6 +2,7 @@
   <header class="admin-header">
     <dt-icon name="icon-warning" />
     <span>{{ msg }}</span>
+    <span>{{ $t('message.hello') }}</span>
     <a :href="url" target="_blank">
       <svg
         t="1584795147277"
@@ -25,22 +26,38 @@
         />
       </svg>
     </a>
+
+    <select v-model="$i18n.locale" @change="changeLocale($i18n.locale)">
+      <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
+        {{ locale }}
+      </option>
+    </select>
   </header>
 </template>
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
+import { Language } from '../../enums/language'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'AdminHeader',
   setup() {
+    const router = useRouter()
     const state = reactive({
       msg: 'hello, admin-header',
       url: 'https://github.com/lost-dream/zcm-admin-ui'
     })
 
+    function changeLocale(locale) {
+      sessionStorage.setItem('lang', Language[locale])
+      // TODO 切换语言,怎么刷新路由
+      router.go(0)
+    }
+
     return {
-      ...toRefs(state)
+      ...toRefs(state),
+      changeLocale
     }
   }
 })

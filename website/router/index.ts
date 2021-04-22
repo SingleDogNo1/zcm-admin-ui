@@ -1,11 +1,10 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
 import { nextTick } from 'vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import hljs from 'highlight.js'
 import { navs } from '../nav.config'
+import i18n from '../locales'
 
-// import { getLang } from '../utils/lang'
-
-// const lang = getLang()
+const lang = i18n.global.locale
 
 export const indexRoute = [
   // {
@@ -43,6 +42,11 @@ const routes = [...indexRoute, ...componentRoutes]
 const router = createRouter({
   history: createWebHashHistory(),
   routes: routes
+})
+
+router.beforeEach((to, from, next) => {
+  console.log('lang :>> ', lang)
+  next()
 })
 
 router.afterEach(() => {

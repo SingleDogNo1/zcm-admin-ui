@@ -4,7 +4,8 @@
   "main": "dist/index.js",
   "license": "ISC",
   "dependencies": {
-    "@admin-ui/button": "^0.0.1"
+    "@admin-ui/button": "^0.0.1",
+    "@admin-ui/icon": "^0.0.0"
   },
   "gitHead": "1b556604a3463084102fea0cc7226482f4732e9a"
 }
