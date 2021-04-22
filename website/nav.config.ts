@@ -1,26 +1,31 @@
-import { getLang } from './utils/lang'
+import i18n from './locales'
+import { Language } from './enums/language'
 
-const localLang = getLang()
-const componentsString = localLang === 'en-US' ? 'Components' : '组件'
-const baseComponentsString = localLang === 'en-US' ? 'Base Components' : '基础组件'
+const { t, locale } = i18n.global
 
 export const navs = [
   {
-    name: componentsString,
+    name: t('menu.guide'),
+    list: [
+      {
+        path: '/installation',
+        name: 'Installation',
+        title: t('components.installation'),
+        component: () => import(`./markdown/${Language[locale]}/installation.md`)
+      }
+    ]
+  },
+  {
+    name: t('menu.component'),
     groups: [
       {
-        groupName: baseComponentsString,
+        groupName: t('menu.baseComponent'),
         list: [
           {
-            path: '/button',
+            path: '/component/button',
             name: 'Button',
-            component: () => {
-              if (localLang === 'en-US') {
-                return import('./markdown/en-US/button.md')
-              } else {
-                return import('./markdown/zh-CN/button.md')
-              }
-            }
+            title: t('components.button'),
+            component: () => import(`./markdown/${Language[locale]}/button.md`)
           }
         ]
       }

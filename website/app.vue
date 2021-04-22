@@ -39,7 +39,7 @@ export default defineComponent({
   .menu-bar {
     width: 200px;
     color: #fff;
-    background: red;
+    background: rgba(255, 0, 0, 0.4);
   }
 
   .doc-wrapper {

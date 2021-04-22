@@ -11,6 +11,12 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 #app {
   display: flex;
   flex-direction: column;

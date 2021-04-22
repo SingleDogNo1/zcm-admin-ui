@@ -1,5 +1,8 @@
 {
-  "message": {
-    "hello": "hello, world"
+  "menu": {
+    "guide": "Guide"
+  },
+  "components": {
+    "button": "Button"
   }
 }

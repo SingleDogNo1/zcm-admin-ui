@@ -1,5 +1,11 @@
 {
-  "message": {
-    "hello": "你好,世界"
+  "menu": {
+    "guide": "开发指南",
+    "component": "组件",
+    "baseComponent": "基础组件"
+  },
+  "components": {
+    "installation": "安装",
+    "button": "Button 按钮"
   }
 }

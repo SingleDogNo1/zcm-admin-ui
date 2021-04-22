@@ -11407,6 +11407,16 @@ yorkie@^2.0.0:
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
 
+zcm-admin-ui@./zcm-admin-ui-0.0.0.tgz:
+  version "0.0.0"
+  resolved "./zcm-admin-ui-0.0.0.tgz#2001086afed04e0b9c12c6c92f765a7f247bd69c"
+
+zcm-admin-ui@./zcm-admin-ui-0.0.1.tgz:
+  version "0.0.1"
+  resolved "./zcm-admin-ui-0.0.1.tgz#6c39908e6d9f451ee240acbb3b4aca597cf18a69"
+  dependencies:
+    zcm-admin-ui "./zcm-admin-ui-0.0.0.tgz"
+
 zwitch@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-1.0.5.tgz#d11d7381ffed16b742f6af7b3f223d5cd9fe9920"

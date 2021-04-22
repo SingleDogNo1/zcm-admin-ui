@@ -5,6 +5,8 @@ import i18n from './locales/index'
 // admin-ui
 import AdminUI from '../packages/admin-ui'
 import '../packages/styles/src/index.scss'
+
+console.log('AdminUI :>> ', AdminUI)
 // components
 import DemoBlock from './components/DemoBlock/index.vue'
 import DtIcon from '@packages/icon'

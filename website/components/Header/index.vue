@@ -2,7 +2,6 @@
   <header class="admin-header">
     <dt-icon name="icon-warning" />
     <span>{{ msg }}</span>
-    <span>{{ $t('message.hello') }}</span>
     <a :href="url" target="_blank">
       <svg
         t="1584795147277"
