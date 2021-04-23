@@ -36,12 +36,6 @@ export default defineComponent({
   overflow: hidden;
   flex: 1;
 
-  .menu-bar {
-    width: 200px;
-    color: #fff;
-    background: rgba(255, 0, 0, 0.4);
-  }
-
   .doc-wrapper {
     flex: 1;
   }

@@ -1,4 +1,14 @@
-.dt-button {
-  color: blue;
-  background-color: red;
+@import './mixins/mixins.scss';
+
+.#{$namespace}-button {
+  display: inline-block;
+  padding: 12px 23px;
+  line-height: 1;
+  white-space: nowrap;
+  border: none;
+  outline: none;
+
+  + .#{$namespace}-button {
+    margin-left: 10px;
+  }
 }

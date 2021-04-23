@@ -65,6 +65,8 @@ export default defineComponent({
 <style scoped lang="scss">
 .admin-header {
   height: 50px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 0 30px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 </style>

@@ -1,32 +1,23 @@
 <template>
-  <ul class="nav">
+  <ul class="menu">
     <li v-for="(item, index) in menuRoute" :key="index">
-      <h2 class="">{{ item.name }}</h2>
-      <ul v-if="item.groups">
-        <li v-for="(item2, index2) in item.groups" :key="index2">
-          <h3>{{ item2.groupName }}</h3>
-          <ul>
-            <li
-              v-for="(item3, index3) in item2.list"
-              :id="item3.name"
-              :key="index3"
-              @click="linkTo(item3.name)"
-            >
-              {{ item3.title }}
-            </li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul v-else>
-        <li
-          v-for="(item4, index4) in item.list"
-          :id="item4.name"
-          :key="index4"
-          @click="linkTo(item4.name)"
-        >
-          {{ item4.title }}
-        </li>
+      <h2 class="menu-title">{{ item.name }}</h2>
+      <ul>
+        <template v-if="item.groups">
+          <li v-for="(item2, index2) in item.groups" :key="index2">
+            <div class="group-title">{{ item2.groupName }}</div>
+            <ul>
+              <li v-for="(item3, index3) in item2.list" :key="index3" class="menu-item">
+                <router-link :to="{ name: item3.name }">{{ item3.title }}</router-link>
+              </li>
+            </ul>
+          </li>
+        </template>
+        <template v-else>
+          <li v-for="(item4, index4) in item.list" :key="index4" class="menu-item">
+            <router-link :to="{ name: item4.name }">{{ item4.title }}</router-link>
+          </li>
+        </template>
       </ul>
     </li>
   </ul>
@@ -63,8 +54,6 @@ export default defineComponent({
     })
     state.menuRoute = menuGroup
 
-    console.log('state. :>> ', menuGroup)
-
     function linkTo(routeName) {
       router.push({ name: routeName })
     }
@@ -78,7 +67,42 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.nav {
-  color: red;
+@import '../../styles/var';
+
+.menu {
+  width: 270px;
+  padding-top: 10px;
+  padding-left: 30px;
+  overflow: auto;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+
+  .menu-title {
+    margin: 10px 0 0;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .group-title {
+    margin: 10px 0 0;
+    font-size: 12px;
+    line-height: 26px;
+    color: #999;
+  }
+
+  .menu-item {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+
+    ::v-deep(a) {
+      display: block;
+      transition: 0.4s;
+
+      &.router-link-exact-active {
+        color: $--color-primary;
+      }
+    }
+  }
 }
 </style>
