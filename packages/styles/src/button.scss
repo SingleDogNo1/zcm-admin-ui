@@ -2,30 +2,12 @@
 @import './common/var.scss';
 
 $buttonType: (
-  primary: (
-    color: $--color-primary,
-    hover: $--color-primary-lighter
-  ),
-  success: (
-    color: $--color-success,
-    hover: $--color-success-light
-  ),
-  warning: (
-    color: $--color-warning,
-    hover: $--color-warning-light
-  ),
-  danger: (
-    color: $--color-danger,
-    hover: $--color-danger-light
-  ),
-  info: (
-    color: $--color-info,
-    hover: $--color-info-light
-  ),
-  default: (
-    color: $--color-white,
-    hover: $--color-white
-  )
+  primary: $--color-primary,
+  success: $--color-success,
+  warning: $--color-warning,
+  danger: $--color-danger,
+  info: $--color-info,
+  default: $--color-white
 );
 
 .#{$namespace}-button {
@@ -41,17 +23,18 @@ $buttonType: (
     @if ($type != 'default') {
       &--#{$type} {
         color: $--color-white;
-        background: map-get($color, color);
-        border: 1px solid map-get($color, color);
+        background: $color;
+        border: 1px solid$color;
 
-        &:hover, &:active {
-          background: mix(map-get($color, color), $--color-white, 70%) ;
-          border: 1px solid mix(map-get($color, color), $--color-white, 70%) ;
+        &:hover,
+        &:active {
+          background: mix($color, $--color-white, 70%);
+          border: 1px solid mix($color, $--color-white, 70%);
         }
       }
     } @else {
       &--#{$type} {
-        background: map-get($color, color);
+        background: $color;
         border: 1px solid $--border-color-default;
       }
     }
