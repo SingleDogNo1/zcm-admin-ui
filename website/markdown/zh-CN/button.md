@@ -26,7 +26,7 @@
   <dt-button type="warning">
     Ghost
   </dt-button>
-  <dt-button type="text">
+  <dt-button type="info">
     Delicate
   </dt-button>
 </template>

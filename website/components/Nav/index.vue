@@ -70,7 +70,7 @@ export default defineComponent({
 @import '../../styles/var';
 
 .menu {
-  width: 270px;
+  width: 260px;
   padding-top: 10px;
   padding-left: 30px;
   overflow: auto;
@@ -79,7 +79,7 @@ export default defineComponent({
 
   .menu-title {
     margin: 10px 0 0;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
   }
 
@@ -98,6 +98,10 @@ export default defineComponent({
     ::v-deep(a) {
       display: block;
       transition: 0.4s;
+
+      &:hover {
+        color: $--color-primary;
+      }
 
       &.router-link-exact-active {
         color: $--color-primary;

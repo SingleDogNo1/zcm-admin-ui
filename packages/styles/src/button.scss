@@ -1,12 +1,43 @@
 @import './mixins/mixins.scss';
+@import './common/var.scss';
+
+$buttonType: (
+  primary: $--color-primary,
+  success: $--color-success,
+  warning: $--color-warning,
+  danger: $--color-danger,
+  info: $--color-info,
+  default: $--color-white
+);
 
 .#{$namespace}-button {
   display: inline-block;
-  padding: 12px 23px;
+  padding: 0.85em 1.5em;
+  font-size: 14px;
   line-height: 1;
   white-space: nowrap;
-  border: none;
+  cursor: pointer;
   outline: none;
+
+  @each $type, $color in $buttonType {
+    @if ($type != 'default') {
+      &--#{$type} {
+        color: $--color-white;
+        background: $color;
+        border: 1px solid $color;
+
+        &:hover {
+          // background: $--color-#{$type}-light;
+          background: red;
+        }
+      }
+    } @else {
+      &--#{$type} {
+        background: $color;
+        border: 1px solid $--border-color-default;
+      }
+    }
+  }
 
   + .#{$namespace}-button {
     margin-left: 10px;

@@ -1,7 +1,13 @@
 <template>
   <header class="admin-header">
-    <dt-icon name="icon-warning" />
     <span>{{ msg }}</span>
+
+    <select v-model="$i18n.locale" style="margin: 0 60px" @change="changeLocale($i18n.locale)">
+      <option v-for="item in langList" :key="item.key" :value="item.key">
+        {{ item.value }}
+      </option>
+    </select>
+
     <a :href="url" target="_blank">
       <svg
         t="1584795147277"
@@ -25,34 +31,50 @@
         />
       </svg>
     </a>
-
-    <select v-model="$i18n.locale" @change="changeLocale($i18n.locale)">
-      <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
-        {{ locale }}
-      </option>
-    </select>
   </header>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs } from 'vue'
-import { Language } from '../../enums/language'
+import { defineComponent, reactive, toRefs /* watch */ } from 'vue'
+import { Language, Locale } from '@website/enums/language'
 import { useRouter } from 'vue-router'
+// import { useI18n } from 'vue-i18n'
+
+type LocaleKey = keyof typeof Locale
 
 export default defineComponent({
   name: 'AdminHeader',
   setup() {
     const router = useRouter()
+    // const { t, locale } = useI18n()
+
     const state = reactive({
       msg: 'hello, admin-header',
-      url: 'https://github.com/lost-dream/zcm-admin-ui'
+      url: 'https://github.com/lost-dream/zcm-admin-ui',
+      langList: []
     })
+
+    for (const key in Locale) {
+      if (Object.prototype.hasOwnProperty.call(Locale, key)) {
+        const element: { [index: string]: string } = {}
+        element.key = key
+        element.value = Locale[key as LocaleKey]
+        state.langList.push(element)
+      }
+    }
 
     function changeLocale(locale) {
       sessionStorage.setItem('lang', Language[locale])
       // TODO 切换语言,怎么刷新路由
       router.go(0)
     }
+
+    // watch(
+    //   () => locale.value,
+    //   locale => {
+    //     console.log('语言切换为 :>> ', t(Locale[locale as LocaleKey]))
+    //   }
+    // )
 
     return {
       ...toRefs(state),
