@@ -6,6 +6,7 @@
   },
   "components": {
     "installation": "安装",
-    "button": "Button 按钮"
+    "button": "Button 按钮",
+    "icon": "Icon 图标"
   }
 }

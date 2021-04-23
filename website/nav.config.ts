@@ -26,6 +26,12 @@ export const navs = [
             name: 'Button',
             title: t('components.button'),
             component: () => import(`./markdown/${Language[locale]}/button.md`)
+          },
+          {
+            path: '/component/icon',
+            name: 'Icon',
+            title: t('components.icon'),
+            component: () => import(`./markdown/${Language[locale]}/icon.md`)
           }
         ]
       }
