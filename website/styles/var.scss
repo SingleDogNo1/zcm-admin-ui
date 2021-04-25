@@ -1,1 +1,5 @@
-$--color-primary: #1989fa !default;
+@import '../../packages/styles/src/common/var.scss';
+
+$--color-primary: #1989fa;
+$--color-font: #455a64;
+$--border-color: #ddd;

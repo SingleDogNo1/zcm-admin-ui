@@ -55,11 +55,18 @@ module.exports = function (source) {
   }
 
   output.push(content.slice(start))
+  // const result = `
+  // <template>
+  //   <section class="content admin-doc">
+  //     ${output.join('')}
+  //   </section>
+  // </template>
+  // ${pageScript}
+  // `
+
   const result = `
   <template>
-    <section class="content admin-doc">
       ${output.join('')}
-    </section>
   </template>
   ${pageScript}
   `

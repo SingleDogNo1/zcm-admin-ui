@@ -27,24 +27,57 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import '../../styles/var.scss';
+
 .container {
   overflow: hidden auto;
   color: #34495e;
   box-sizing: border-box;
 
-  .doc-content--,
-  .doc-content--about {
-    h1 {
-      img {
-        margin: 5px;
-      }
-    }
-  }
-
   .doc-content {
     flex: 1;
     position: relative;
-    padding: 30px 60px 75px 60px;
+    padding: 20px 50px 20px;
+
+    a {
+      color: $--color-primary;
+    }
+
+    %quote {
+      padding: 8px 16px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .tip {
+      background-color: #f3f5f7;
+      border-left: #42b983 5px solid;
+      @extend %quote;
+
+      p {
+        color: #445368;
+      }
+    }
+
+    .warning {
+      background-color: rgba(255, 229, 100, 0.3);
+      border-left: #e7c000 5px solid;
+      @extend %quote;
+
+      p {
+        color: #6b5900;
+      }
+    }
+
+    .danger {
+      background-color: #ffe6e6;
+      border-left: #c00 5px solid;
+      @extend %quote;
+
+      p {
+        color: #4d0000;
+      }
+    }
 
     .card {
       padding: 24px;
@@ -54,90 +87,58 @@ export default defineComponent({
       box-shadow: 0 8px 12px #ebedf0;
     }
 
-    a {
-      color: #1989fa;
-    }
-
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-      font-weight: 400;
+      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+        'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+      font-weight: 500;
       line-height: 1.5;
-      color: #455a64;
+      color: $--color-font;
       cursor: pointer;
     }
 
     h1 {
-      margin-top: 8px;
-      margin-bottom: 20px;
-      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
-        'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+      margin: 8px 0 20px;
       font-size: 30px;
-      font-weight: 500;
-      line-height: 38px;
     }
 
     h2 {
       margin: 1em 0 0.6em;
-      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
-        'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
       font-size: 26px;
-      font-weight: 500;
     }
 
     h3 {
       margin: 1em 0 0.6em;
-      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
-        'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
       font-size: 22px;
-      font-weight: 500;
     }
 
     h4 {
       margin: 1em 0 0.6em;
-      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
-        'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
       font-size: 18px;
-      font-weight: 500;
     }
 
     h5 {
       margin: 1em 0 0.6em;
-      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
-        'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
       font-size: 14px;
-      font-weight: 500;
     }
 
     p {
-      margin: 10px;
       font-size: 16px;
-      line-height: 26px;
+      line-height: 1.5;
       color: #34495e;
     }
 
-    pre {
-      padding: 18px 20px;
-      font-size: 14px;
-      background: #fafafa;
-    }
-
     code {
-      padding: 0;
+      padding: 18px 20px;
       margin: 0;
       overflow: auto;
-      font-size: 14px;
-      line-height: 20px;
       background: #fafafa;
-      border: none;
+      border: 1px solid $--border-color;
     }
 
     table {

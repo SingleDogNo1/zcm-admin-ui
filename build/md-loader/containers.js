@@ -21,4 +21,5 @@ module.exports = md => {
 
   md.use(mdContainer, 'tip')
   md.use(mdContainer, 'warning')
+  md.use(mdContainer, 'danger')
 }
