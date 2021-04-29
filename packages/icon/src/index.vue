@@ -1,5 +1,5 @@
 <template>
-  <i :class="['iconfont', name]"></i>
+  <i :class="['iconfont', 'icon-' + name]"></i>
 </template>
 
 <script lang="ts">

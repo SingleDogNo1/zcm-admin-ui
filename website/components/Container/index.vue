@@ -137,8 +137,9 @@ export default defineComponent({
       padding: 18px 20px;
       margin: 0;
       overflow: auto;
-      background: #fafafa;
-      border: 1px solid $--border-color;
+      background: transparent;
+      border: none;
+      box-shadow: inset -2px -2px 4px #fff, inset 2px 2px 4px #dde4ef;
     }
 
     table {
@@ -161,6 +162,8 @@ export default defineComponent({
       }
 
       tbody {
+        background: #fff;
+
         tr {
           height: 46px;
           font-family: PingFangSC-Regular;

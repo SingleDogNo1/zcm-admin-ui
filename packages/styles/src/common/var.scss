@@ -4,7 +4,7 @@ $--font-path: 'fonts';
 
 /* Color */
 $--color-primary: #409eff !default;
-$--color-white: #fff !default;
+$--color-white: #fafafa !default;
 $--color-black: #000 !default;
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
 $--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
@@ -33,4 +33,12 @@ $--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
 $--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
 $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 
+/* Font */
+$--color-text-primary: #303133 !default;
+$--color-text-regular: #606266 !default;
+$--color-text-secondary: #909399 !default;
+$--color-text-placeholder: #c0c4cc !default;
 $--border-color-default: #dcdfe6 !default;
+$--border-color-light: #e4e7ed !default;
+$--border-color-lighter: #ebeef5 !default;
+$--border-color-extra-light: #f2f6fc !default;

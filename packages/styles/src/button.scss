@@ -17,30 +17,78 @@ $buttonType: (
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
+  border: none;
+  border-radius: 5px;
   outline: none;
+
+  &--medium {
+    padding: 0.75em 1.4em;
+  }
+
+  &--small {
+    padding: 0.65em 1.1em;
+  }
+
+  &--mini {
+    padding: 0.5em 1em;
+  }
+
+  &.is-round {
+    border-radius: 30px;
+  }
+
+  &.is-circle {
+    padding: 0.85em;
+    border-radius: 50%;
+  }
 
   @each $type, $color in $buttonType {
     @if ($type != 'default') {
       &--#{$type} {
         color: $--color-white;
         background: $color;
-        border: 1px solid$color;
+        box-shadow: -2px -2px 4px rgba(lighten($color, 10), 50%),
+          2px 2px 4px rgba(darken($color, 10), 50%);
 
-        &:hover,
-        &:active {
-          background: mix($color, $--color-white, 70%);
-          border: 1px solid mix($color, $--color-white, 70%);
+        &:not(.is-disabled):hover {
+          background: lighten($color, 3);
+        }
+
+        &:not(.is-disabled):active,
+        &:not(.is-disabled).active {
+          background: $color;
+          box-shadow: inset -2px -2px 4px lighten($color, 10), inset 2px 2px 4px darken($color, 10);
+        }
+
+        &.is-disabled {
+          cursor: not-allowed;
+          background: mix($color, $--color-white, 62%);
         }
       }
     } @else {
       &--#{$type} {
         background: $color;
-        border: 1px solid $--border-color-default;
+        box-shadow: -2px -2px 4px lighten($color, 10), 2px 2px 4px darken($color, 10);
+
+        &:not(.is-disabled):hover {
+          background: darken($color, 3);
+        }
+
+        &:not(.is-disabled):active,
+        &:not(.is-disabled).active {
+          background: $color;
+          box-shadow: inset -2px -2px 4px lighten($color, 10), inset 2px 2px 4px darken($color, 10);
+        }
+
+        &.is-disabled {
+          color: $--color-text-placeholder;
+          cursor: not-allowed;
+        }
       }
     }
   }
 
-  + .#{$namespace}-button {
+  & + & {
     margin-left: 10px;
   }
 }

@@ -1193,6 +1193,11 @@
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
   integrity sha1-o92NpOuEqZbDbjMd+Y2Cq9drUW4=
 
+"@types/node@^15.0.1":
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.1.tgz#ef34dea0881028d11398be5bf4e856743e3dc35a"
+  integrity sha512-TMkXt0Ck1y0KKsGr9gJtWGjttxlZnnvDtphxUOSd0bfaR6Q1jle+sPvrzNR1urqYTWMinoKvjKfXUGsumaO1PA==
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "https://registry.npm.taobao.org/@types/normalize-package-data/download/@types/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
@@ -1671,7 +1676,7 @@ ansi-colors@^4.1.1:
   resolved "https://registry.npm.taobao.org/ansi-colors/download/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
   integrity sha1-y7muJWv3UK8eqzRPIpqif+lLo0g=
 
-ansi-escapes@^4.2.1, ansi-escapes@^4.3.0:
+ansi-escapes@^4.2.1, ansi-escapes@^4.3.0, ansi-escapes@^4.3.1:
   version "4.3.2"
   resolved "https://registry.npm.taobao.org/ansi-escapes/download/ansi-escapes-4.3.2.tgz?cache=0&sync_timestamp=1616593335784&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fansi-escapes%2Fdownload%2Fansi-escapes-4.3.2.tgz#6b2291d1db7d98b6521d5f1efa42d0f3a9feb65e"
   integrity sha1-ayKR0dt9mLZSHV8e+kLQ86n+tl4=
@@ -2615,6 +2620,11 @@ ci-info@^2.0.0:
   resolved "https://registry.npm.taobao.org/ci-info/download/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha1-Z6npZL4xpR4V5QENWObxKDQAL0Y=
 
+ci-info@^3.0.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.1.1.tgz#9a32fcefdf7bcdb6f0a7e1c0f8098ec57897b80a"
+  integrity sha512-kdRWLBIJwdsYJWYJFtAFFYxybguqeF91qpZaggjG5Nf8QKdizFG2hjqvaTXbxFIcYbSaD74KpAXv6BSm17DHEQ==
+
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/cipher-base/download/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"
@@ -2933,6 +2943,11 @@ connect-history-api-fallback@^1.6.0:
   version "1.6.0"
   resolved "https://registry.npm.taobao.org/connect-history-api-fallback/download/connect-history-api-fallback-1.6.0.tgz#8b32089359308d111115d81cad3fceab888f97bc"
   integrity sha1-izIIk1kwjRERFdgcrT/Oq4iPl7w=
+
+consola@^2.15.0:
+  version "2.15.3"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.15.3.tgz#2e11f98d6a4be71ff72e0bdf07bd23e12cb61550"
+  integrity sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==
 
 console-browserify@^1.1.0:
   version "1.2.0"
@@ -8403,6 +8418,11 @@ pretty-hrtime@^1.0.0:
   resolved "https://registry.npm.taobao.org/pretty-hrtime/download/pretty-hrtime-1.0.3.tgz#b7e3ea42435a4c9b2759d99e0f201eb195802ee1"
   integrity sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=
 
+pretty-time@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/pretty-time/-/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
+  integrity sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA==
+
 process-nextick-args@^2.0.0, process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/process-nextick-args/download/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
@@ -9686,6 +9706,13 @@ static-extend@^0.1.1:
   version "1.5.0"
   resolved "https://registry.npm.taobao.org/statuses/download/statuses-1.5.0.tgz?cache=0&sync_timestamp=1609654066899&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstatuses%2Fdownload%2Fstatuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+
+std-env@^2.2.1:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/std-env/-/std-env-2.3.0.tgz#66d4a4a4d5224242ed8e43f5d65cfa9095216eee"
+  integrity sha512-4qT5B45+Kjef2Z6pE0BkskzsH0GO7GrND0wGlTM1ioUe3v0dGYx9ZJH0Aro/YyA8fqQ5EyIKDRjZojJYMFTflw==
+  dependencies:
+    ci-info "^3.0.0"
 
 stdout-stream@^1.4.0:
   version "1.4.1"
@@ -11092,6 +11119,20 @@ webpack@^4.44.1:
     watchpack "^1.7.4"
     webpack-sources "^1.4.1"
 
+webpackbar@^5.0.0-3:
+  version "5.0.0-3"
+  resolved "https://registry.yarnpkg.com/webpackbar/-/webpackbar-5.0.0-3.tgz#f4f96c8fb13001b2bb1348252db4c980ab93aaac"
+  integrity sha512-viW6KCYjMb0NPoDrw2jAmLXU2dEOhRrtku28KmOfeE1vxbfwCYuTbTaMhnkrCZLFAFyY9Q49Z/jzYO80Dw5b8g==
+  dependencies:
+    ansi-escapes "^4.3.1"
+    chalk "^4.1.0"
+    consola "^2.15.0"
+    figures "^3.2.0"
+    pretty-time "^1.1.0"
+    std-env "^2.2.1"
+    text-table "^0.2.0"
+    wrap-ansi "^7.0.0"
+
 websocket-driver@>=0.5.1, websocket-driver@^0.7.4:
   version "0.7.4"
   resolved "https://registry.npm.taobao.org/websocket-driver/download/websocket-driver-0.7.4.tgz#89ad5295bbf64b480abcba31e4953aca706f5760"
@@ -11406,16 +11447,6 @@ yorkie@^2.0.0:
     is-ci "^1.0.10"
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
-
-zcm-admin-ui@./zcm-admin-ui-0.0.0.tgz:
-  version "0.0.0"
-  resolved "./zcm-admin-ui-0.0.0.tgz#2001086afed04e0b9c12c6c92f765a7f247bd69c"
-
-zcm-admin-ui@./zcm-admin-ui-0.0.1.tgz:
-  version "0.0.1"
-  resolved "./zcm-admin-ui-0.0.1.tgz#6c39908e6d9f451ee240acbb3b4aca597cf18a69"
-  dependencies:
-    zcm-admin-ui "./zcm-admin-ui-0.0.0.tgz"
 
 zwitch@^1.0.0:
   version "1.0.5"

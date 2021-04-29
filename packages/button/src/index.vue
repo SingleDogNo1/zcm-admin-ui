@@ -3,13 +3,17 @@
     :class="[
       'dt-button',
       type ? 'dt-button--' + type : '',
+      size ? 'dt-button--' + size : '',
       {
+        'is-round': round,
+        'is-circle': circle,
         'is-disabled': disabled
       }
     ]"
     :disabled="disabled"
     @click="handleClick"
   >
+    <i v-if="icon" :class="['iconfont', 'icon-' + icon]"></i>
     <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
@@ -17,28 +21,34 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import type { PropType } from 'vue'
-type IButtonType = PropType<
-  'primary' | 'success' | 'warning' | 'danger' | 'info' | 'text' | 'default'
->
+type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'text' | 'default'
+type ButtonSize = 'medium' | 'small' | 'mini'
 
 export default defineComponent({
   name: 'DtButton',
   props: {
     type: {
-      type: String as IButtonType,
-      default: 'default',
-      validator: (val: string) => {
-        return ['default', 'primary', 'success', 'warning', 'info', 'danger', 'text'].includes(val)
-      }
+      type: String as PropType<ButtonType>,
+      default: 'default'
     },
-    disabled: Boolean
+    disabled: Boolean,
+    round: Boolean,
+    circle: Boolean,
+    size: {
+      type: String as PropType<ButtonSize>,
+      default: ''
+    },
+    icon: {
+      type: String,
+      default: ''
+    }
   },
   emits: ['click'],
   setup(props, ctx) {
-    //methods
-    const handleClick = evt => {
+    const handleClick = (evt: MouseEvent) => {
       ctx.emit('click', evt)
     }
+
     return {
       handleClick
     }

@@ -1,0 +1,36 @@
+.demo-box.icon {
+  .iconfont {
+    margin: 0 10px;
+    font-size: 20px;
+  }
+}
+
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    flex: 0 0 12%;
+    padding: 12px;
+
+    div {
+      display: flex;
+      height: 100px;
+      box-shadow: -2px -2px 4px #fff, 2px 2px 4px #dde4ef;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        font-size: 30px;
+      }
+
+      span {
+        padding-top: 10px;
+        font-size: 16px;
+        line-height: 1;
+      }
+    }
+  }
+}

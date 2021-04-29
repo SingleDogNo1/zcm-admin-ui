@@ -1,5 +1,6 @@
 'use strict'
 const { VueLoaderPlugin } = require('vue-loader')
+const WebpackBar = require('webpackbar')
 const path = require('path')
 
 const webpackConfig = {
@@ -75,7 +76,7 @@ const webpackConfig = {
       }
     ]
   },
-  plugins: [new VueLoaderPlugin()]
+  plugins: [new VueLoaderPlugin(), new WebpackBar()]
 }
 
 module.exports = webpackConfig

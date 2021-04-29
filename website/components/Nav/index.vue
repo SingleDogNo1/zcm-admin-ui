@@ -74,7 +74,7 @@ export default defineComponent({
   padding-top: 10px;
   padding-left: 30px;
   overflow: auto;
-  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 5%);
   box-sizing: border-box;
 
   .menu-title {

@@ -6,15 +6,20 @@ import i18n from './locales/index'
 import AdminUI from '../packages/admin-ui'
 import '../packages/styles/src/index.scss'
 
-console.log('AdminUI :>> ', AdminUI)
+import icon from './icon'
+
 // components
 import DemoBlock from './components/DemoBlock/index.vue'
 import DtIcon from '@packages/icon'
 // reset-css
 import 'highlight.js/styles/color-brewer.css'
-import './styles/common.scss'
+import './styles/index.scss'
 
-createApp(App)
+const app = createApp(App)
+
+app.config.globalProperties.$icon = icon
+
+app
   .use(AdminUI)
   .use(i18n)
   .component('demo-block', DemoBlock)

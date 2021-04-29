@@ -1,18 +1,18 @@
 <template>
-  <div class="grid" @mouseenter="hovering = true" @mouseleave="hovering = false">
-    <div ref="meta" class="demo-box">
+  <div class="grid">
+    <div ref="meta" :class="['demo-box', className]">
       <div v-if="$slots.default && metaShow" class="description">
         <slot></slot>
       </div>
       <div class="source">
         <slot name="source"></slot>
       </div>
+
       <div v-show="metaShow" class="highlight">
         <slot name="highlight"></slot>
       </div>
       <div class="demo-block-control" @click="showMeta">
         <dt-icon :name="iconName" />
-        <!-- <span v-show="hovering">{{ hoveringText }}</span> -->
         <span>{{ hoveringText }}</span>
       </div>
     </div>
@@ -22,16 +22,18 @@
 <script lang="ts">
 import hljs from 'highlight.js'
 import { computed, nextTick, reactive, toRefs } from 'vue'
+import { useRoute } from 'vue-router'
 
 export default {
   name: 'DemoBlock',
   setup(props, { slots }) {
+    const route = useRoute()
+
     const state = reactive({
-      metaShow: false,
-      hovering: false
+      metaShow: false
     })
 
-    const iconName = computed(() => (state.metaShow ? 'icon-sort-up' : 'icon-sort-down'))
+    const iconName = computed(() => (state.metaShow ? 'sort-up' : 'sort-down'))
     const hoveringText = computed(() => {
       const lang = sessionStorage.getItem('lang')
       if (state.metaShow) {
@@ -40,6 +42,8 @@ export default {
         return lang === 'en-US' ? 'Expand' : '展开'
       }
     })
+
+    const className = computed(() => route.name.toString().toLowerCase())
 
     const highlight = slots.highlight
     if (highlight) {
@@ -57,7 +61,8 @@ export default {
       ...toRefs(state),
       iconName,
       hoveringText,
-      showMeta
+      showMeta,
+      className
     }
   }
 }
@@ -66,20 +71,24 @@ export default {
 <style lang="scss" scoped>
 .grid {
   display: flex;
-  width: 90%;
   padding-top: 10px;
 
   .demo-box {
     width: 100%;
     height: auto;
+    padding-top: 1px;
     margin: 10px;
-    border: 1px solid #eaeefb;
-    border-radius: 3px;
+    border-radius: 10px;
+    box-shadow: inset -5px -5px 5px #fff, inset 5px 5px 5px #dde4ef;
     transition: 0.2s;
     flex: 1;
 
+    .description {
+      padding: 10px 20px 0;
+    }
+
     .source {
-      padding: 10px 20px 10px 20px;
+      padding: 20px;
     }
 
     .meta {
@@ -107,14 +116,11 @@ export default {
       position: relative;
       height: 44px;
       padding-top: 10px;
-      margin-top: -1px;
       color: #d3dce6;
       text-align: center;
       cursor: pointer;
       background-color: #fff;
-      border-top: 1px solid #eaeefb;
-      border-bottom-right-radius: 4px;
-      border-bottom-left-radius: 4px;
+      border-radius: 0 0 10px 10px;
       box-sizing: border-box;
 
       &:focus,
