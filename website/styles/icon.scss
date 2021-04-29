@@ -8,7 +8,6 @@
 .icon-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   li {
     flex: 0 0 12%;
@@ -27,9 +26,10 @@
       }
 
       span {
-        padding-top: 10px;
+        padding: 10px 16px 0;
         font-size: 16px;
         line-height: 1;
+        text-align: center;
       }
     }
   }

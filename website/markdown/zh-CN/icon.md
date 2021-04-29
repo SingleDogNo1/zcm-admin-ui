@@ -12,7 +12,7 @@
 <dt-icon name="warning"></dt-icon>
 <dt-icon name="scan"></dt-icon>
 <dt-icon name="drag"></dt-icon>
-<dt-button name="key">搜索</dt-button>
+<dt-button icon="key">搜索</dt-button>
 ```
 
 :::
