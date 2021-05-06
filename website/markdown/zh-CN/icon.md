@@ -23,7 +23,7 @@
   <li v-for="name in $icon" :key="name">
     <div>
       <i :class="['iconfont', 'icon-' + name]"></i>
-      <span class="icon-name">{{name}}</span>
+      <span class="icon-name">{{ name }}</span>
       </div>
   </li>
 </ul>
