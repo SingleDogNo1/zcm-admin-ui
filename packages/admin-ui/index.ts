@@ -1,9 +1,10 @@
 import { App } from 'vue'
 
-import DtButton from '../button'
-import DtIcon from '../icon'
+import ZButton from '../button'
+import ZButtonGroup from '../button-group'
+import ZIcon from '../icon'
 
-const components = [DtButton, DtIcon]
+const components = [ZButton, ZButtonGroup, ZIcon]
 
 const install = (app: App): void => {
   components.forEach(component => {
@@ -11,6 +12,6 @@ const install = (app: App): void => {
   })
 }
 
-export { DtButton, DtIcon, install }
+export { ZButton, ZButtonGroup, ZIcon, install }
 
 export default { install }

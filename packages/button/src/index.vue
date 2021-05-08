@@ -1,9 +1,9 @@
 <template>
   <button
     :class="[
-      'dt-button',
-      type ? 'dt-button--' + type : '',
-      size ? 'dt-button--' + size : '',
+      'z-button',
+      type ? 'z-button--' + type : '',
+      size ? 'z-button--' + size : '',
       {
         'is-round': round,
         'is-circle': circle,
@@ -25,7 +25,7 @@ type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'text'
 type ButtonSize = 'medium' | 'small' | 'mini'
 
 export default defineComponent({
-  name: 'DtButton',
+  name: 'ZButton',
   props: {
     type: {
       type: String as PropType<ButtonType>,

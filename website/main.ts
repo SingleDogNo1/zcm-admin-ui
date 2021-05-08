@@ -10,7 +10,7 @@ import icon from './icon'
 
 // components
 import DemoBlock from './components/DemoBlock/index.vue'
-import DtIcon from '@packages/icon'
+import ZIcon from '@packages/icon'
 // reset-css
 import 'highlight.js/styles/color-brewer.css'
 import './styles/index.scss'
@@ -23,6 +23,6 @@ app
   .use(AdminUI)
   .use(i18n)
   .component('demo-block', DemoBlock)
-  .component('dt-icon', DtIcon)
+  .component('z-icon', ZIcon)
   .use(router)
   .mount('#app')

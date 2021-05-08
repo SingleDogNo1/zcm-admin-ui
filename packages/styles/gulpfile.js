@@ -16,7 +16,7 @@ function compile() {
     .pipe(
       rename(path => {
         if (!noPrefixFile.test(path.basename)) {
-          path.basename = `dt-${path.basename}`
+          path.basename = `z-${path.basename}`
         }
       })
     )

@@ -14,30 +14,30 @@
 <template>
   <ul>
     <li style="margin-bottom: 30px;">
-      <dt-button type="default">Default</dt-button>
-      <dt-button type="primary" @click="handleClick">Primary</dt-button>
-      <dt-button type="success">Success</dt-button>
-      <dt-button type="warning">Warning</dt-button>
-      <dt-button type="info">Info</dt-button>
-      <dt-button type="danger">Danger</dt-button>
+      <z-button type="default">Default</z-button>
+      <z-button type="primary" @click="handleClick">Primary</z-button>
+      <z-button type="success">Success</z-button>
+      <z-button type="warning">Warning</z-button>
+      <z-button type="info">Info</z-button>
+      <z-button type="danger">Danger</z-button>
     </li>
 
     <li style="margin-bottom: 30px;">
-      <dt-button round type="default">Default</dt-button>
-      <dt-button round type="primary">Primary</dt-button>
-      <dt-button round type="success">Success</dt-button>
-      <dt-button round type="warning">Warning</dt-button>
-      <dt-button round type="info">Info</dt-button>
-      <dt-button round type="danger">Danger</dt-button>
+      <z-button round type="default">Default</z-button>
+      <z-button round type="primary">Primary</z-button>
+      <z-button round type="success">Success</z-button>
+      <z-button round type="warning">Warning</z-button>
+      <z-button round type="info">Info</z-button>
+      <z-button round type="danger">Danger</z-button>
     </li>
 
     <li>
-      <dt-button circle type="default" icon="success" />
-      <dt-button circle type="primary" icon="qrcode" />
-      <dt-button circle type="success" icon="key" />
-      <dt-button circle type="warning" icon="warning" />
-      <dt-button circle type="info" icon="info" />
-      <dt-button circle type="danger" icon="error" />
+      <z-button circle type="default" icon="success" />
+      <z-button circle type="primary" icon="qrcode" />
+      <z-button circle type="success" icon="key" />
+      <z-button circle type="warning" icon="warning" />
+      <z-button circle type="info" icon="info" />
+      <z-button circle type="danger" icon="error" />
     </li>
   </ul>
 </template>
@@ -65,9 +65,9 @@ export default {
 <template>
   <ul>
     <li style="margin-bottom: 30px;">
-      <dt-button disabled type="default" @click="handleClick">Default</dt-button>
-      <dt-button round disabled type="success">Success</dt-button>
-      <dt-button circle disabled type="danger" icon="error" />
+      <z-button disabled type="default" @click="handleClick">Default</z-button>
+      <z-button round disabled type="success">Success</z-button>
+      <z-button circle disabled type="danger" icon="error" />
     </li>
   </ul>
 </template>
@@ -94,11 +94,48 @@ export default {
 ```html
 <ul>
   <li style="margin-bottom: 30px;">
-    <dt-button>default</dt-button>
-    <dt-button type="success" size="medium">medium</dt-button>
-    <dt-button type="warning" size="small">small</dt-button>
-    <dt-button type="info" disabled size="mini">mini</dt-button>
+    <z-button>default</z-button>
+    <z-button type="success" size="medium">medium</z-button>
+    <z-button type="warning" size="small">small</z-button>
+    <z-button type="info" disabled size="mini">mini</z-button>
   </li>
+</ul>
+```
+
+:::
+
+## 图标按钮
+
+:::demo
+
+```html
+<z-button circle type="default" icon="success" />
+<z-button circle type="success" icon="key" />
+<z-button type="primary" icon="qrcode">二维码</z-button>
+<z-button type="primary" >二维码 <i class="iconfont icon-qrcode" style="margin-left: 5px"></i> </z-button>
+```
+
+:::
+
+## 按钮组
+
+:::demo
+
+```html
+<ul>
+  <li style="margin-bottom: 30px">
+    <z-button-group>
+      <z-button type="primary" icon="arrow-left">上一页</z-button>
+      <z-button type="primary">下一页<i class="iconfont icon-arrow-right" style="margin-left: 0.5em;"></i></z-button>
+    </z-button-group>
+  </li>
+  <li>
+    <z-button-group>
+      <z-button type="primary" icon="edit" />
+      <z-button type="primary" icon="delete" />
+      <z-button type="primary" icon="qrcode" />
+    </z-button-group>
+  <li>
 </ul>
 ```
 

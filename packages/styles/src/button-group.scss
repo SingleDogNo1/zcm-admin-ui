@@ -1,0 +1,50 @@
+@import './mixins/mixins.scss';
+@import './common/var.scss';
+
+.#{$namespace}-button-group {
+  display: inline-block;
+  vertical-align: middle;
+
+  &::before, &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  > .#{$namespace}-button {
+    position: relative;
+    float: left;
+
+    & + .#{$namespace}-button {
+      margin-left: 0;
+    }
+
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:first-child:last-child {
+      border-top-right-radius: $--button-border-radius;
+      border-bottom-right-radius: $--button-border-radius;
+      border-bottom-left-radius: $--button-border-radius;
+      border-top-left-radius: $--button-border-radius;
+
+      &.is-round {
+        border-radius: 30px;
+      }
+
+      &.is-circle {
+        border-radius: 50%;
+      }
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+  }
+}

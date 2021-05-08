@@ -1,7 +1,7 @@
-import DtIcon from './src/index.vue'
+import ZIcon from './src/index.vue'
 
-DtIcon.install = app => {
-  app.component(DtIcon.name, DtIcon)
+ZIcon.install = app => {
+  app.component(ZIcon.name, ZIcon)
 }
 
-export default DtIcon
+export default ZIcon

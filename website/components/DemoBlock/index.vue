@@ -12,7 +12,7 @@
         <slot name="highlight"></slot>
       </div>
       <div class="demo-block-control" @click="showMeta">
-        <dt-icon :name="iconName" />
+        <z-icon :name="iconName" />
         <span>{{ hoveringText }}</span>
       </div>
     </div>

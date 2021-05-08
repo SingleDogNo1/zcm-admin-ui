@@ -14,21 +14,21 @@ Tags (or encapsulates) an action command that triggers the corresponding busines
 
 ```html
 <template>
-  <dt-button type="default">
+  <z-button type="default">
     Default
-  </dt-button>
-  <dt-button type="primary" @click="handleClick">
+  </z-button>
+  <z-button type="primary" @click="handleClick">
     Primary
-  </dt-button>
-  <dt-button type="link">
+  </z-button>
+  <z-button type="link">
     Link
-  </dt-button>
-  <dt-button type="ghost">
+  </z-button>
+  <z-button type="ghost">
     Ghost
-  </dt-button>
-  <dt-button type="delicate">
+  </z-button>
+  <z-button type="delicate">
     Delicate
-  </dt-button>
+  </z-button>
 </template>
 
 <script>

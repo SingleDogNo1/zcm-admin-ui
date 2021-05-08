@@ -1,7 +1,7 @@
-import DtButton from './src/index.vue'
+import ZButton from './src/index.vue'
 
-DtButton.install = app => {
-  app.component(DtButton.name, DtButton)
+ZButton.install = app => {
+  app.component(ZButton.name, ZButton)
 }
 
-export default DtButton
+export default ZButton

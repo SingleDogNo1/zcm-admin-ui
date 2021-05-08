@@ -9,10 +9,10 @@
 :::demo
 
 ```html
-<dt-icon name="warning"></dt-icon>
-<dt-icon name="scan"></dt-icon>
-<dt-icon name="drag"></dt-icon>
-<dt-button icon="key">搜索</dt-button>
+<z-icon name="warning"></z-icon>
+<z-icon name="scan"></z-icon>
+<z-icon name="drag"></z-icon>
+<z-button icon="key">搜索</z-button>
 ```
 
 :::

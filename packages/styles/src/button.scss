@@ -91,4 +91,8 @@ $buttonType: (
   & + & {
     margin-left: 10px;
   }
+
+  [class*="icon-"] + span {
+    margin-left: 0.5em;
+  }
 }

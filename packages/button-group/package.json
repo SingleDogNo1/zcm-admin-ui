@@ -1,0 +1,7 @@
+{
+  "name": "@admin-ui/button-group",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "",
+  "main": "lib/index.js"
+}
